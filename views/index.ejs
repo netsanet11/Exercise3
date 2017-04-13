@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <table>
+      <th>Name</th><th>Category</th><th>Longitude</th><th>Latitude</th>
+      <% for(var i =0 ; i< locations.length; i++){ var id = locations[i]._id; %>        
+        <tr>
+            <td><%= locations[i].name %></td> <t/>
+            <td><%= locations[i].category %></td> <t/>
+            <td><%= locations[i].longitude %></td> <t/>
+            <td><%= locations[i].latitude %></td> <t/>
+           
+            <td><a href="/index/update?id=<%= id %>">Update</a> <t> <a href="/index/delete?id=<%= id %>">Delete</a></td>            
+        </tr>
+      <%}%>
+    </table>
+    <a href="/index/add">Add Location</a>
+  </body>
+</html>

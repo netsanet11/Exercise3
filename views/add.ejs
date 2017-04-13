@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+   
+    <form action="/index/add" method="post">
+        Name:<input type="text"  name="name" /> <br/>
+        Category: <input type="text"  name="category" /> <br/>
+        Longitude:<input type="text"  name="longitude" /> <br/>
+        Latitude: <input type="text"  name="latitude" /> <br/>      
+        <input type="submit" value="Add" />
+    </form>
+    <a href="/">Home</a>
+</body>
+
+</html>

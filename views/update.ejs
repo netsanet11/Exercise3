@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>
+        <%= title %>
+    </h1>
+    <p>Welcome to
+        <%= title %>
+    </p>
+    <form action="/index/update" method="post">
+        Name:<input type="text" value="<%= location.name %>" name="name" /> <br/>
+        Category: <input type="text" value="<%= location.category %>" name="category" /> <br/>
+        Longitude:<input type="text" value="<%= location.longitude %>" name="longitude" /> <br/>
+        Latitude: <input type="text" value="<%= location.latitude %>" name="latitude" /> <br/>
+        <input type="hidden" value="<%= location._id %>" name="id"/>
+        <input type="submit" value="Update" />
+    </form>
+    <a href="/">Home</a>
+</body>
+
+</html>
